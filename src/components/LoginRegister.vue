@@ -43,7 +43,7 @@
 			}
 		},
 		methods: {
-			...mapActions('store', ['registerUser', 'loginUser']),
+			...mapActions('DataStore', ['registerUser', 'loginUser']),
 			submitForm() {
 				if (this.tab == 'login') {
 					this.loginUser(this.formData)

@@ -1,0 +1,55 @@
+{
+	"users": {
+		"USERID1": {
+			"name": "Danny",
+			"email": "danny@test.com"
+		},
+		"USERID2": {
+			"name": "Jim",
+			"email": "jim@test.com"
+		}
+	},
+	"dailyMoodLogs": {
+		"USERID1": {
+      "moodLogs": [
+        {
+          "id": 1234,
+          "emotions": [
+            {
+              "id": 1,
+              "emotion": "sad",
+              "intensityBefore": 100,
+              "intensityGoal": 10,
+              "intensityAfter": 12,
+              "paradoxical": ["Bla1", "Bla2", "..."]
+            },
+            {
+              "id": 2,
+              "emotion": "hopeless",
+              "intensityBefore": 100,
+              "intensityGoal": 10,
+              "intensityAfter": 12,
+              "paradoxical": ["Bla1", "Bla2", "..."]
+            }
+          ],
+          "thoughts": [
+            {
+              "id": 1,
+              "thought": "blaaaaaaaaaaa",
+              "distortions": [true, false, true, false, false],
+              "challenge": "Blub",
+              "alternativeThought": "So soll es sein"
+            },
+            {
+              "id": 2,
+              "thought": "blsdadsdaaaaaaaaaaaa",
+              "distortions": [true, false, true, false, false],
+              "challenge": "Bluasdsadb",
+              "alternativeThought": "So sasdasdoll es sein"
+            }
+          ]
+        }
+      ]
+		}
+	}
+}
