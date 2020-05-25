@@ -2,11 +2,13 @@
 	"users": {
 		"USERID1": {
 			"name": "Danny",
-			"email": "danny@test.com"
+			"email": "danny@test.com",
+      "online": false
 		},
 		"USERID2": {
 			"name": "Jim",
-			"email": "jim@test.com"
+			"email": "jim@test.com",
+      "online": false
 		}
 	},
 	"dailyMoodLogs": {

@@ -11,13 +11,15 @@
 			class="q-mb-md"
 			outlined
 			type="email"
-			label="Email" />
+			label="Email"
+      />
 		<q-input
 			v-model="formData.password"
 			class="q-mb-md"
 			outlined
 			type="password"
-			label="Password" />
+			label="Password"
+      />
 		<div class="row">
 			<q-space />
 			<q-btn
@@ -37,8 +39,8 @@
 			return {
 				formData: {
 					name: '',
-					email: 'danny@test.com',
-					password: '123456'
+					email: 'sebastian@test.de',
+					password: 'sebastian'
 				}
 			}
 		},

@@ -3,6 +3,7 @@
     <q-header elevated>
       <q-toolbar>
         <q-btn
+          v-if="$route.meta.back"
           v-go-back.single
           flat
           dense
@@ -10,26 +11,30 @@
         <q-toolbar-title class="absolute-center">
           CBT APP
         </q-toolbar-title>
-<!--        <q-btn-->
-<!--          v-if="!userDetails.userId"-->
-<!--          to="/auth"-->
-<!--          class="absolute-right q-pr-sm"-->
-<!--          icon="account_circle"-->
-<!--          no-caps-->
-<!--          flat-->
-<!--          dense-->
-<!--          label="Login" />-->
+        <div
+          v-if="$route.meta.login">
         <q-btn
+          v-if="!userDetails.userId"
+          class="absolute-right q-pr-sm"
+          icon="account_circle"
+          to="/auth"
+          no-caps
+          flat
+          dense
+          label="Login" />
+        <q-btn
+          v-else
           @click="logoutUser"
           class="absolute-right q-pr-sm"
           icon="account_circle"
           no-caps
-          to="login"
+          to="/login"
           flat
           dense>
           Logout<br>
-          Sebastian
+          {{userDetails.name}}
         </q-btn>
+        </div>
       </q-toolbar>
     </q-header>
 
@@ -40,7 +45,7 @@
 </template>
 
 <script>
-
+import {mapState, mapActions} from 'vuex'
 export default {
   name: 'MainLayout',
 
@@ -49,7 +54,17 @@ export default {
 
     }
   },
-
+ computed: {
+      ...mapState('DataStore', ['userDetails'])
+ },
+    methods: {
+      ...mapActions('DataStore', ['logoutUser'] )
+    }
 
 }
 </script>
+<style lang="stylus">
+  .q-toolbar
+    .q-btn
+      line-height: 1.2
+</style>
